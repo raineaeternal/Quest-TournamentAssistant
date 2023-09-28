@@ -54,9 +54,6 @@ target_include_directories(${COMPILE_ID} PUBLIC ${SHARED_DIR})
 # codegen includes
 target_include_directories(${COMPILE_ID} PRIVATE ${EXTERN_DIR}/includes/${CODEGEN_ID}/include)
 
-# gzip library
-target_include_directories(${COMPILE_ID} PRIVATE ${INCLUDE_DIR}/gzip-hpp/include)
-
 target_link_libraries(${COMPILE_ID} PRIVATE -llog -lz "${VCPKG_ROOT}/installed/arm64-android/lib/libprotobuf.a")
 # add extern stuff like libs and other includes
 include(extern.cmake)
